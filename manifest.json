@@ -1,0 +1,22 @@
+{
+  "name": "Fibrolatamunidos Pro",
+  "short_name": "FibroPro",
+  "description": "Una aplicación de apoyo para personas con fibromialgia, que ofrece información detallada y herramientas para registrar tratamientos, citas médicas y síntomas diarios.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f3ff",
+  "theme_color": "#8b5cf6",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

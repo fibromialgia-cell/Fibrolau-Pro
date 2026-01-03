@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fibrolatamunidos Pro</title>
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Theme Color for Browser UI -->
+    <meta name="theme-color" content="#8b5cf6" />
+
+    <!-- iOS Specific Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="FibroPro" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            /* Aumenta el tamaño de la fuente base para una mejor legibilidad */
+            font-size: 105%;
+        }
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+<body class="bg-gradient-to-br from-violet-50 to-purple-50">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                    })
+                    .catch(error => {
+                        console.log('ServiceWorker registration failed: ', error);
+                    });
+            });
+        }
+    </script>
+
+    <!-- Tailwind CSS Safelist for dynamic classes -->
+    <div class="hidden">
+      <!-- 50 shades for gradients -->
+      <span class="bg-violet-50 from-violet-50 to-violet-50 hover:bg-violet-50/50"></span>
+      <span class="bg-sky-50 from-sky-50 to-sky-50"></span>
+      <span class="bg-emerald-50 from-emerald-50 to-emerald-50"></span>
+      <span class="bg-rose-50 from-rose-50 to-rose-50"></span>
+      <span class="bg-amber-50 from-amber-50 to-amber-50"></span>
+      <span class="bg-teal-50 from-teal-50 to-teal-50"></span>
+      <span class="bg-lime-50 from-lime-50 to-lime-50"></span>
+      <span class="bg-indigo-50 from-indigo-50 to-indigo-50"></span>
+      <span class="bg-cyan-50 from-cyan-50 to-cyan-50"></span>
+
+      <!-- Existing 100+ shades -->
+      <span class="bg-violet-100 text-violet-600 border-violet-300 from-violet-100 to-violet-200 bg-violet-500 shadow-violet-500/30"></span>
+      <span class="bg-sky-100 text-sky-600 border-sky-300 from-sky-100 to-sky-200"></span>
+      <span class="bg-emerald-100 text-emerald-600 border-emerald-300 from-emerald-100 to-emerald-200"></span>
+      <span class="bg-rose-100 text-rose-600 border-rose-300 from-rose-100 to-rose-200"></span>
+      <span class="bg-amber-100 text-amber-600 border-amber-300 from-amber-100 to-amber-200"></span>
+      <span class="bg-teal-100 text-teal-600 border-teal-300 from-teal-100 to-teal-200"></span>
+      <span class="bg-lime-100 text-lime-600 border-lime-300 from-lime-100 to-lime-200"></span>
+      <span class="bg-indigo-100 text-indigo-600 border-indigo-300 from-indigo-100 to-indigo-200"></span>
+      <span class="bg-cyan-100 text-cyan-600 border-cyan-300 from-cyan-100 to-cyan-200"></span>
+    </div>
+</body>
+</html>
